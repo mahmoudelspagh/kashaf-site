@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كشّاف | اختبار السباكة وكشف التسريبات</title>
+<meta name="description" content="كشّاف: تجربة قيد الإعداد لفحص السباكة في القاهرة الكبرى. شرح لحدود الفحص وتسجيل اهتمام.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#F3F6F7;--surface:#fff;--ink:#13202A;--muted:#566874;--line:#D6DEE3;--teal:#0D6770;--teal-ink:#fff;--teal-soft:#DCEEF0;--copper:#B24A1B;--copper-soft:#F6E6DC;--font:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0E161C;--surface:#16212A;--ink:#E5ECF0;--muted:#93A4AF;--line:#2A3A45;--teal:#52BAC3;--teal-ink:#0E161C;--teal-soft:#123438;--copper:#E8895A;--copper-soft:#3A2418;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85}
+.in{max-width:900px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-left,0px))}
+header.top{padding-block:14px;border-bottom:1px solid var(--line);background:var(--surface)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:var(--teal);text-decoration:none}
+.brand svg{width:34px;height:34px}
+a.cta,button.cta{display:inline-block;background:var(--teal);color:var(--teal-ink);font:600 16px var(--font);border:0;border-radius:10px;padding:10px 20px;text-decoration:none;cursor:pointer}
+a.cta:focus-visible,button.cta:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+.hero{padding-block:48px 40px;display:flex;flex-direction:column;gap:16px}
+.hero h1{font-size:clamp(28px,6vw,44px);line-height:1.35;margin:0;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--copper)}
+.hero p{margin:0;color:var(--muted);max-width:60ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.trust{font-size:14px;color:var(--muted)}
+section.s{padding-block:36px;border-top:1px solid var(--line)}
+section.s h2{font-size:26px;margin:0 0 6px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.card h3{margin:0 0 6px;font-size:18px;color:var(--teal)}
+.card p{margin:0;font-size:15.5px;color:var(--muted);line-height:1.8}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+ol.steps li{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+ol.steps b.n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.compare{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.compare table{border-collapse:collapse;width:100%;min-width:480px;font-size:15.5px}
+.compare th,.compare td{padding:10px 14px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+.compare th{background:var(--teal-soft)}
+.compare tr:last-child td{border-bottom:0}
+.note{background:var(--copper-soft);border-radius:12px;padding:14px 18px;font-size:15.5px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
+form{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:12px}
+label{display:grid;gap:4px;font-weight:600;font-size:15px}
+input,select{font:400 16px var(--font);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.hint{font-size:13.5px;color:var(--muted)}
+.err{color:var(--copper);font-size:14px}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="in bar">
+  <a class="brand" href="#top" aria-label="كشّاف">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="8"/><path d="M60 28C60 28 38 54 38 68a22 22 0 0 0 44 0C82 54 60 28 60 28Z" fill="var(--copper)"/><line x1="94" y1="94" x2="112" y2="112" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
+    كشّاف
+  </a>
+  <a class="cta" href="#book">سجّل اهتمامك</a>
+</div></header>
+
+<main id="top">
+<div class="in">
+
+<div class="hero">
+  <h1>افهم سباكتك <em>قبل ما توقّع.</em></h1>
+  <p>كشّاف تجربة قيد الإعداد لفحص السباكة في القاهرة الكبرى. بنشرح إزاي الفحص بيشتغل وحدوده. ولو مهتم، سجّل اهتمامك ونرجع لك لما التجربة تبدأ.</p>
+  <div class="row"><a class="cta" href="#book">سجّل اهتمامك</a><span class="trust">تسجيل اهتمام بالواتساب. مفيش حجز مؤكد قبل ما نعلن بدء التجربة.</span></div>
+</div>
+
+<section class="s" id="services">
+  <h2>اللي بنجهّزه</h2>
+  <p class="sub">نطاق الخدمة المخطّط للتجربة، وممكن يتعدّل بعد أول حالات.</p>
+  <div class="grid">
+    <div class="card"><h3>اختبار ضغط السباكة</h3><p>بنرفع الضغط في شبكة المية ونراقب العدّاد. هبوط الضغط مؤشر فني بيحتاج تفسير. القراءات بتتسجّل في تقرير.</p></div>
+    <div class="card"><h3>كشف مكان التسريب</h3><p>أدوات مساعدة زي الأجهزة الصوتية والكاميرا الحرارية وقياس الرطوبة. الكاميرا بتعرض فرق حرارة السطح، مش بتصوّر المياه، ومفيش ضمان إن المكان يتحدد في كل مرة.</p></div>
+    <div class="card"><h3>فحص استلام وحدة</h3><p>قبل ما توقّع محضر الاستلام: ضغط المية، والصرف والميول، والخلاطات، والسخان، وتسريب الأحواض والتواليتات.</p></div>
+  </div>
+</section>
+
+<section class="s" id="how">
+  <h2>إزاي بنشتغل</h2>
+  <ol class="steps">
+    <li><b class="n">١</b><div><b>تسجّل اهتمامك بالواتساب.</b> بتقولنا المنطقة ونوع الوحدة وإيه المشكلة، ونرجع لك لما التجربة تبدأ.</div></li>
+    <li><b class="n">٢</b><div><b>الفني يوصل ويجهّز الاختبار.</b> بنعزل الشبكة ونركّب الطلمبة والعدّاد.</div></li>
+    <li><b class="n">٣</b><div><b>نختبر ونراقب.</b> بنرفع الضغط ونسيبه المدة المناسبة للمشروع، ونسجّل القراءات.</div></li>
+    <li><b class="n">٤</b><div><b>لو فيه هبوط ضغط نحاول نحدد مكانه.</b> بالأجهزة، ومن غير ما نكسّر قبل ما نتأكد. ومفيش ضمان إنه يتحدد.</div></li>
+    <li><b class="n">٥</b><div><b>تستلم تقريرك.</b> قراءات وصور وملاحظات واضحة، مع حدود الفحص.</div></li>
+  </ol>
+</section>
+
+<section class="s" id="why">
+  <h2>ليه التقرير مهم</h2>
+  <p class="sub">كلام الفني الشفهي بيتنسى. الورقة بتفضل معاك.</p>
+  <div class="compare"><table>
+    <thead><tr><th></th><th>فحص شفهي</th><th>فحص كشّاف</th></tr></thead>
+    <tbody>
+      <tr><td>القراءات</td><td>«شكلها سليمة»</td><td>ضغط البداية والنهاية والمدة</td></tr>
+      <tr><td>مكان العيب</td><td>تخمين</td><td>مكان محتمل بالأجهزة لما يكون ممكن، مع صورة</td></tr>
+      <tr><td>مع المطوّر أو المقاول</td><td>كلام ضد كلام</td><td>تقرير مكتوب تقدر تقدّمه</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="s" id="when">
+  <h2>امتى تحتاجنا</h2>
+  <div class="grid">
+    <div class="card"><h3>هتستلم وحدة</h3><p>اطمّن على السباكة قبل التوقيع، وأي عيب يتسجّل في محضر الاستلام.</p></div>
+    <div class="card"><h3>فاتورة المية عالية</h3><p>ممكن يكون فيه تسريب مخفي بيستهلك مية من غير ما تشوفه.</p></div>
+    <div class="card"><h3>رطوبة أو بقعة في الحيطة</h3><p>قبل ما تكسّر وتصلّح، اعرف المصدر الأول.</p></div>
+    <div class="card"><h3>شركة أو مطوّر أو إدارة أملاك</h3><p>فحص قبل التسليم أو دوري. كلمنا على عرض مخصوص.</p></div>
+  </div>
+</section>
+
+<section class="s" id="faq">
+  <h2>أسئلة بتتسأل</h2>
+  <details><summary>هل لازم تكسير؟</summary><p>الأجهزة بتحدد مكان التسريب بدقة عشان التكسير يتقلّل. لكن لو العيب في مكان مش بيتوصّل له بالأجهزة، هنقولك قبل ما نبدأ.</p></details>
+  <details><summary>هل بتضمنوا تلاقوا التسريب؟</summary><p>لأ. بنحاول بالأجهزة ونقولك بصراحة لو ما اتحددش، ومن غير مبالغة. اختبار الضغط نفسه بيقول لك هل فيه تسريب ولا لأ.</p></details>
+  <details><summary>الاختبار ممكن يضر المواسير؟</summary><p>بنشتغل بضغط حسب مواصفات المشروع وبشكل تدريجي، وبنطلب منك إقرار قبل الاختبار.</p></details>
+  <details><summary>إمتى الخدمة تبدأ؟</summary><p>التجربة قيد الإعداد ومفيش ميعاد مؤكد. سجّل اهتمامك وهنبلّغك.</p></details>
+  <details><summary>الزيارة بتاخد قد إيه؟</summary><p>بتختلف حسب مساحة الوحدة وعدد الأدوار. هنقولك تقدير لما التجربة تبدأ.</p></details>
+  <details><summary>بتخدموا فين؟</summary><p>القاهرة الكبرى. اكتب منطقتك في الحجز وهنأكد لك.</p></details>
+</section>
+
+<section class="s" id="book">
+  <h2>سجّل اهتمامك</h2>
+  <p class="sub">املا البيانات وهيفتح لك الواتساب برسالة جاهزة. التجربة لسه قيد الإعداد، فده تسجيل اهتمام مش حجز مؤكد ولا عرض سعر.</p>
+  <form id="f" novalidate>
+    <label>الاسم<input id="name" autocomplete="name" required></label>
+    <label>المنطقة<input id="area" placeholder="مثال: القاهرة الجديدة، التجمع الخامس" required></label>
+    <label>الخدمة
+      <select id="svc">
+        <option>اختبار ضغط السباكة</option>
+        <option>كشف مكان تسريب</option>
+        <option>فحص استلام وحدة</option>
+        <option>عرض لشركة أو مطوّر</option>
+      </select>
+    </label>
+    <label>إيه المشكلة أو الوحدة؟<input id="msg" placeholder="مثال: شقة ١٢٠ م² هتتسلّم الشهر الجاي"></label>
+    <button class="cta" type="submit">ابعت على الواتساب</button>
+    <p class="err" id="err" role="alert" hidden></p>
+    <p class="hint">بياناتك بتتبعت للواتساب بس. مفيش حاجة بتتخزّن على الموقع.</p>
+  </form>
+</section>
+
+</div>
+</main>
+
+<footer><div class="in">كشّاف. اختبار السباكة وكشف التسريبات، القاهرة الكبرى. <span id="legalname"></span></div></footer>
+
+<script>
+/* إعدادات تتعدّل قبل النشر: الرقم بالصيغة الدولية من غير + وصفر (مثال 201000000000) */
+var CONFIG = { whatsapp: "201009677890", legalName: "" };
+
+document.getElementById("legalname").textContent = CONFIG.legalName;
+document.getElementById("f").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var err = document.getElementById("err");
+  var name = document.getElementById("name").value.trim();
+  var area = document.getElementById("area").value.trim();
+  if (!name || !area) { err.hidden = false; err.textContent = "اكتب اسمك ومنطقتك الأول."; return; }
+  if (!CONFIG.whatsapp) { err.hidden = false; err.textContent = "رقم الواتساب لسه مش متضبّط على الصفحة."; return; }
+  err.hidden = true;
+  var text = "السلام عليكم، أنا " + name + " من " + area + " وعايز أسجّل اهتمامي بتجربة كشّاف.\nالخدمة: " +
+    document.getElementById("svc").value + "\n" + document.getElementById("msg").value.trim();
+  window.location.href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text);
+});
+</script>
+</body>
+</html>
