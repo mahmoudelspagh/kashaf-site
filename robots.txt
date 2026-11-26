@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mahmoudelspagh.github.io/kashaf-site/sitemap.xml
