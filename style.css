@@ -23,7 +23,8 @@ header.top{padding-block:20px;position:relative}
 .hero h1{font-size:clamp(32px,6vw,54px);line-height:1.3;margin:0 0 20px;font-weight:700;text-wrap:balance}.hero h1 em{font-style:normal;color:var(--accent)}
 .lead{margin:0 0 30px;color:rgba(247,244,238,.8);font-size:18.5px;max-width:58ch}
 .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.trust{margin-top:24px;font-size:14px;color:rgba(247,244,238,.6)}
-section.s{padding-block:76px 0}main>section.s:last-child{padding-bottom:84px}.s .eyebrow{color:var(--brass)}.s .eyebrow:before{background:var(--brass)}
+section.s{padding-block:76px 0}main>section.s:last-child{padding-bottom:84px}
+.vid{display:grid;place-items:center}.vid video{width:min(100%,340px);aspect-ratio:9/16;border-radius:22px;background:#0A222B;box-shadow:0 18px 50px rgba(0,0,0,.35)}.s .eyebrow{color:var(--brass)}.s .eyebrow:before{background:var(--brass)}
 h2{font-size:clamp(25px,4vw,34px);line-height:1.4;margin:0 0 10px;text-wrap:balance;font-weight:700}h3{margin:0 0 8px;font-size:19px;font-weight:600}
 .sub{color:var(--muted);margin:0 0 30px;max-width:62ch}.more{margin:24px 0 0}.more a{color:var(--brass);font-weight:600;text-decoration:none}.more a:hover{text-decoration:underline}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
